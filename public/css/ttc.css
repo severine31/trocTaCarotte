@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico');
+
+html,
+body {
+    font-family: pacifico;
+    margin: 0px;
+}
+.headerTitle{
+    color: #434343;
+    text-align: center;
+    font-family: pacifico;
+    font-size: 100px;
+    margin: 0px;
+    background-color: #e9f6a8;
+}
+.boxHeader {
+    width: 200em;
+}
+.navbar-navCustom{
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.navbar{
+    background-color: #cdd2b2;
+    padding: unset !important;
+}
+img {
+    width: 280px;
+    height: auto;
+    position: absolute;
+}
