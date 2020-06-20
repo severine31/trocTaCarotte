@@ -2,19 +2,26 @@
 
 html,
 body {
-    font-family: pacifico;
+    font-family: pacifico !important;
     margin: 0px;
 }
 .headerTitle{
     color: #434343;
     text-align: center;
-    font-family: pacifico;
     font-size: 100px;
     margin: 0px;
     background-color: #e9f6a8;
 }
 .boxHeader {
-    width: 200em;
+    width: 2000em;
+}
+.boxCitation {
+    background-color: white;
+    color: #BBC695;
+    font-family: arial;
+    text-align: right;
+    padding-right: 2em;
+    font-style: italic;
 }
 .navbar-navCustom{
     display: flex;
@@ -31,4 +38,37 @@ img {
     width: 280px;
     height: auto;
     position: absolute;
+}
+.imgBouton{
+    width: 1.5em; 
+    height: auto;
+}
+.containerBouton{
+    margin-left: 3.5em;
+    padding-bottom: 3em;
+}
+.searchForm{
+    background-color: #F3F3F3; 
+    border-radius: 5px;
+    padding:1em;
+    width: 40em;
+    font-size: 26px !important;
+}
+.customBtn{
+    display: flex !important;
+    flex-direction: column !important;
+    width: 13em !important;
+    background-color: #cdd2b2 !important;
+    color: #434343 !important;
+    text-align: center !important;
+    font-size: 20px !important;
+    border-color: white !important;    
+}
+.radio{
+    margin-bottom: 1em;
+}
+.img-form{
+    width: 7em;
+    height: auto;
+    position: relative;    
 }

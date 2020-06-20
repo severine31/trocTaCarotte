@@ -1,1 +1,68 @@
 {% extends 'base.html.twig'%}
+
+{% block body %}
+    <div class="containerBouton">
+        <a class="btn btn-primary customBtn" href="#" role="button">
+            <img class=imgBouton src={{asset('/img/legume/carotte_flat.png')}} style=width:2%/> 
+            <div class="container">
+                <span>Je troc ma carotte !</span>
+            </div>
+        </a>
+    </div>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <form class="searchForm">
+                <div>
+                    <label for="exampleFormControlInput1">Je recherche :</label>
+                </div>
+                <div class="row justify-content-around radio">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="maCarotteCat" id="legumeRadio" value="option1" checked>
+                        <label class="form-check-label" for="legumeRadio">Légume</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="maCarotteCat" id="fruitRadio" value="option2">
+                        <label class="form-check-label" for="fruitRadio">Fruit</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="maCarotteCat" id="autreRadio" value="option2">
+                        <label class="form-check-label" for="autreRadio">Autre</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <img class=img-form src={{asset('/img/legume/panier_flat.png')}} style=width:5%/> 
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-5">
+                            <label for="carotteSelect" class="col customLabel">La 'carotte' à chercher :</label>
+                        </div>
+                        <div class="col-7">
+                            <select class="form-control" id="carotteSelect">
+                                <option>Default select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <label for="villeSelect" class="col customLabel">Où ça ?</label>
+                        </div>
+                        <div class="col-7">
+                            <select class="form-control" id="villeSelect">
+                                <option>Default select ville</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <label for="contreCarotte" class="col customLabel">Mes 'carottes' à troquer :</label>
+                        </div>
+                        <div class="col-7">
+                            <input type="contreCarotte" class="form-control" id="contreCarotte" placeholder="">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
