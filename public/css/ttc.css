@@ -4,6 +4,7 @@ html,
 body {
     font-family: pacifico !important;
     margin: 0px;
+    font-size: 20px;
 }
 .headerTitle{
     color: #434343;
@@ -52,7 +53,6 @@ img {
     border-radius: 5px;
     padding:1em;
     width: 40em;
-    font-size: 26px !important;
 }
 .customBtn{
     display: flex !important;
@@ -65,10 +65,10 @@ img {
     border-color: white !important;    
 }
 .radio{
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 .img-form{
-    width: 7em;
+    width: 6em;
     height: auto;
     position: relative;    
 }
