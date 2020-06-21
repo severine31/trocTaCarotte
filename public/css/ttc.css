@@ -46,10 +46,11 @@ img {
 }
 .containerBouton{
     margin-left: 3.5em;
-    padding-bottom: 3em;
+    padding-bottom: 1.5em;
 }
 .searchForm{
     background-color: #F3F3F3; 
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     border-radius: 5px;
     padding:1em;
     width: 40em;
@@ -75,5 +76,30 @@ img {
     font-size: 28px;
 }
 .valid{
-    margin-top: 1em;
+    margin-top: 0.4em;
+}
+input{
+    font-family: arial !important;
+}
+select{
+    font-family: arial !important;
+}
+table{
+    margin-top: 2em;
+    text-align: center;
+}
+.headerRow{
+    background-color: #e9f6a8;
+}
+.carotteForm{
+    background-color: #F3F3F3; 
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 7px;
+    padding:1em;
+    width: 25em;   
+}
+.labelCarotteForm{
+    margin: 0em;
+    text-align: left;
+    font-size: 16px;
 }
