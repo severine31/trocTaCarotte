@@ -68,9 +68,10 @@ img {
     margin-bottom: 0.5em;
 }
 .img-form{
-    width: 6em;
-    height: auto;
+    width: auto;
+    height: 5em;
     position: relative;    
+    flex:2;
 }
 .searchHeader{
     font-size: 28px;
@@ -96,10 +97,24 @@ table{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     border-radius: 7px;
     padding:1em;
-    width: 28em;  
+    width: 400px;
+    height: 180px; 
 }
 .labelCarotteForm{
     margin: 0em;
     text-align: left;
     font-size: 16px;
+}
+.noPadding{
+    padding:0px !important;
+}
+.noMargin{
+    margin: auto;
+}
+.form-control-plaintext{
+    text-align: center;
+}
+.carotteName{
+    font-size: 25px;
+    font-style: bolt;
 }

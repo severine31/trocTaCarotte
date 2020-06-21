@@ -87,51 +87,94 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">
-                        <form class="carotteForm">
+                    <td scope="row">
+                        <form class="carotteForm noMargin">
                             <div>
-                                <label class="carotteName" for="">Aubergine</label>
+                                <b class="carotteName">Aubergine</b>
                             </div>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-9">
+                            <div class="container noPadding">
+                                <div class="row justify-content-md-center">
+                                    <div class="col-6">
                                         <div class="container">
                                             <div class="row">
-                                                <div class="col-5">
-                                                    <label for="contreCarotte" class="col labelCarotteForm">Quantité :</label>
+                                                <div class="col-5 noPadding">
+                                                    <label for="contreCarotte" class="col labelCarotteForm noPadding">Quantité :</label>
                                                 </div>
-                                                <div class="col-7">
-                                                    <input type="contreCarotte" class="form-control form-control-sm" id="contreCarotte" placeholder="">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <label for="contreCarotte" class="col labelCarotteForm">Bio :</label>
-                                                </div>
-                                                <div class="col-7">
-                                                    <input type="contreCarotte" class="form-control form-control-sm" id="contreCarotte" placeholder="">
+                                                <div class="col-6 noPadding">
+                                                    <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value="2Kg">
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-5">
-                                                    <label for="contreCarotte" class="col labelCarotteForm">Où :</label>
+                                                <div class="col-5 noPadding">
+                                                    <label for="contreCarotte" class="col labelCarotteForm noPadding">Bio :</label>
                                                 </div>
-                                                <div class="col-7">
-                                                    <input type="contreCarotte" class="form-control form-control-sm" id="contreCarotte" placeholder="">
+                                                <div class="col-6 noPadding">
+                                                    <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value="Oui">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-5 noPadding">
+                                                    <label for="contreCarotte" class="col labelCarotteForm noPadding">Où :</label>
+                                                </div>
+                                                <div class="col-6 noPadding">
+                                                    <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value="Toulouse">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-3">
-                                        <div class="form-check form-check-inline">
-                                            <img class=img-form src={{asset('/img/legume/panier_flat.png')}} style=width:5%/> 
+                                        <div class="form-check form-check-inline noPadding">
+                                            <img class=img-form src={{asset('/img/legume/aubergine_flat.png')}} style=width:100%/> 
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </form>
-                    </th>
-                    <td>Mark</td>
+                    </td>
+                    <td scope="row">
+                        <form class="carotteForm noMargin">
+                            <div>
+                                <b class="carotteName">Patate</b>
+                            </div>
+                            <div class="container noPadding">
+                                <div class="row justify-content-md-center">
+                                    <div class="col-6">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-5 noPadding">
+                                                    <label for="contreCarotte" class="col labelCarotteForm noPadding">Quantité :</label>
+                                                </div>
+                                                <div class="col-6 noPadding">
+                                                    <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value="5Kg">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-5 noPadding">
+                                                    <label for="contreCarotte" class="col labelCarotteForm noPadding">Bio :</label>
+                                                </div>
+                                                <div class="col-6 noPadding">
+                                                    <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value="Non">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-5 noPadding">
+                                                    <label for="contreCarotte" class="col labelCarotteForm noPadding">Où :</label>
+                                                </div>
+                                                <div class="col-6 noPadding">
+                                                    <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value="Toulouse">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-check form-check-inline noPadding">
+                                            <img class=img-form src={{asset('/img/legume/patate_flat.png')}} style=width:100%/> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </td>
                     <td>Otto</td>
                 </tr>
             </tbody>
