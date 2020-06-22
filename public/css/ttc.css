@@ -9,7 +9,7 @@ body {
 .headerTitle{
     color: #434343;
     text-align: center;
-    font-size: 93px;
+    font-size: 87px;
     margin: 0px;
     background-color: #e9f6a8;
 }
@@ -117,4 +117,12 @@ table{
 .carotteName{
     font-size: 25px;
     font-style: bolt;
+}
+.icone{
+    padding-top: 2em;
+}
+.textIcone{
+    display:flex;
+    font-size: 12px;
+    color: #434343;
 }
