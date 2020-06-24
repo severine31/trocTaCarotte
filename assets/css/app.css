@@ -1,6 +1,6 @@
+@import '~bootstrap/dist/css/bootstrap.css';
 @import url('https://fonts.googleapis.com/css2?family=Pacifico');
 
-html,
 body {
     font-family: pacifico !important;
     margin: 0px;
@@ -131,3 +131,4 @@ table{
 .table td[scope=row] {
     vertical-align: middle;
 }
+
