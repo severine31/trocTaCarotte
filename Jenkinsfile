@@ -4,9 +4,11 @@ pipeline{
 
     stages{
         stage("Docker Building"){
-            echo "Build Docker File for TrocTaCarotte"
-            // Build image
-            def carotte_img = docker.build("carotte:latest")
+            steps {
+                echo "Build Docker File for TrocTaCarotte"
+                // Build image
+                docker.build("carotte:latest")
+            }
         }
     }
 }
