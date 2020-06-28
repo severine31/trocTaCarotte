@@ -11,14 +11,14 @@ services:
         labels:   
             - "traefik.enable=true"
             - "traefik.http.middlewares.redirect-tls.redirectscheme.scheme=https"
-            - "traefik.http.middlewares.test-auth.basicauth.users=carotte:$apr1$gb4lh7q9$yDTjVRqBcB5nfw6nn1JyU0"
+            - "traefik.http.middlewares.caro-auth.basicauth.users=carotte:$apr1$gb4lh7q9$yDTjVRqBcB5nfw6nn1JyU0"
             - "traefik.http.routers.carotte.rule=Host(`troctacarotte.fr`)"
             - "traefik.http.routers.carotte.entrypoints=web"
             - "traefik.http.routers.carotte.middlewares=redirect-tls"
             - "traefik.http.routers.carotte-secured.rule=Host(`troctacarotte.fr`)"
             - "traefik.http.routers.carotte-secured.entrypoints=websecure"
             - "traefik.http.routers.carotte-secured.tls.certresolver=mytlschallenge"
-            - "traefik.http.routers.carotte-secured.middlewares=test-auth"
+            - "traefik.http.routers.carotte-secured.middlewares=caro-auth"
             - "traefik.http.services.carotte-secured.loadbalancer.server.port=8000"
         container_name: carotte_tardis
 
