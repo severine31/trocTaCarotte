@@ -1,25 +1,26 @@
 version: '2'
 
-carotte:
-    image: carotte:latest
-    restart: always
-    networks:
-        - tardis_net
-    expose: 
-        - "8000"
-    labels:   
-        - "traefik.enable=true"
-        - "traefik.http.middlewares.redirect-tls.redirectscheme.scheme=https"
-        - "traefik.http.middlewares.test-auth.basicauth.users=carotte:$apr1$gb4lh7q9$yDTjVRqBcB5nfw6nn1JyU0"
-        - "traefik.http.routers.dl.rule=Host(`troctacarotte.fr`)"
-        - "traefik.http.routers.dl.entrypoints=web"
-        - "traefik.http.routers.dl.middlewares=redirect-tls"
-        - "traefik.http.routers.dl-secured.rule=Host(`troctacarotte.fr`)"
-        - "traefik.http.routers.dl-secured.entrypoints=websecure"
-        - "traefik.http.routers.dl-secured.tls.certresolver=mytlschallenge"
-        - "traefik.http.routers.dl-secured.middlewares=test-auth"
-        - "traefik.http.services.dl-secured.loadbalancer.server.port=8000"
-    container_name: carotte_tardis
+services:
+    carotte:
+        image: carotte:latest
+        restart: always
+        networks:
+            - tardis_net
+        expose: 
+            - "8000"
+        labels:   
+            - "traefik.enable=true"
+            - "traefik.http.middlewares.redirect-tls.redirectscheme.scheme=https"
+            - "traefik.http.middlewares.test-auth.basicauth.users=carotte:$apr1$gb4lh7q9$yDTjVRqBcB5nfw6nn1JyU0"
+            - "traefik.http.routers.carotte.rule=Host(`troctacarotte.fr`)"
+            - "traefik.http.routers.carotte.entrypoints=web"
+            - "traefik.http.routers.carotte.middlewares=redirect-tls"
+            - "traefik.http.routers.carotte-secured.rule=Host(`troctacarotte.fr`)"
+            - "traefik.http.routers.carotte-secured.entrypoints=websecure"
+            - "traefik.http.routers.carotte-secured.tls.certresolver=mytlschallenge"
+            - "traefik.http.routers.carotte-secured.middlewares=test-auth"
+            - "traefik.http.services.carotte-secured.loadbalancer.server.port=8000"
+        container_name: carotte_tardis
 
 networks: 
     tardis_net:
