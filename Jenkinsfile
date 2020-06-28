@@ -11,6 +11,11 @@ pipeline{
                     docker.build("carotte:latest")
                 }   
             }
+            steps {
+                echo "Starting docker"
+                sh('docker-compose donw')
+                sh('docker-compose up -d')
+            }
         }
     }
 }
