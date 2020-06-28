@@ -6,7 +6,8 @@ pipeline{
         stage("Docker Building"){
             steps{
                 echo "Build Docker File for TrocTaCarotte"
-                docker.build("carotte:latest")
+                // Vuild image
+                def carotte_img = docker.build("carotte:latest")
             }
         }
     }
