@@ -7,7 +7,9 @@ pipeline{
             steps {
                 echo "Build Docker File for TrocTaCarotte"
                 // Build image
-                docker.build("carotte:latest")
+                script {
+                    docker.build("carotte:latest")
+                }   
             }
         }
     }
