@@ -1,0 +1,25 @@
+{% extends 'base.html.twig'%}
+
+{% block title 'Nouvelle annonce' %}
+{% block body %}
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="searchForm mt-5">
+                <h1>Moi aussi je troque !<h1>
+                <div class="container mt-5">
+                    {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                        <div class="row justify-content-md-center mt-5">
+                            <a class="btn btn-primary customBtn" href="./create" role="button">
+                                <img class=imgBouton src={{asset('build/image/legume/carotte_flat.png')}} style=width:2%/> 
+                                <div class="container">
+                                    <span>C'est parti !</span>
+                                </div>
+                            </a>
+                        </div>
+                    {{ form_end(form)}}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
