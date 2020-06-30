@@ -48,7 +48,7 @@ img {
     margin-left: 3.5em;
     padding-bottom: 0.5em;
 }
-.searchForm{
+.boxForm{
     background-color: #F3F3F3; 
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     border-radius: 5px;
@@ -64,6 +64,13 @@ img {
     font-size: 20px !important;
     border-color: white !important;    
 }
+.BtnValid{
+    background-color: #cdd2b2 !important;
+    color: #434343 !important;
+    font-size: 20px !important;
+    border-color: white;
+    font-family: pacifico !important;
+}
 .radio{
     margin-bottom: 0.5em;
 }
@@ -73,9 +80,10 @@ img {
     position: relative;    
     flex:2;
 }
-.searchHeader{
+.formHeader{
     font-size: 28px;
     margin-bottom: 0px;
+    text-align: center;
 }
 .valid{
     margin-top: 0.4em;
@@ -106,6 +114,9 @@ table{
     text-align: left;
     font-size: 16px;
 }
+.boxForm, label {
+    font-size: 1.5rem;
+}
 .noPadding{
     padding:0px !important;
 }
@@ -130,5 +141,15 @@ table{
 }
 .table td[scope=row] {
     vertical-align: middle;
+}
+.carotteDetailsForm{
+    display: flex;
+}
+.qtyDetails{
+    display: flex;
+    margin-right: 10rem;    
+}
+#logo{
+    margin-top: -18px;
 }
 

@@ -2,25 +2,33 @@
 
 namespace App\Repository;
 
-use App\Entity\MaCarotte;
+use App\Entity\MonAnnonce;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method MaCarotte|null find($id, $lockMode = null, $lockVersion = null)
- * @method MaCarotte|null findOneBy(array $criteria, array $orderBy = null)
- * @method MaCarotte[]    findAll()
- * @method MaCarotte[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method MonAnnonce|null find($id, $lockMode = null, $lockVersion = null)
+ * @method MonAnnonce|null findOneBy(array $criteria, array $orderBy = null)
+ * @method MonAnnonce[]    findAll()
+ * @method MonAnnonce[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class MaCarotteRepository extends ServiceEntityRepository
+class MonAnnonceRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, MaCarotte::class);
+        parent::__construct($registry, MonAnnonce::class);
     }
 
+    public function findAvailableAnnonce(){
+        return $this->createQueryBuilder('MonAnnonce')
+            ->andWhere('MonAnnonce.Statut = 1')
+            ->getQuery()
+            ->getResult();
+    }
+
+
     // /**
-    //  * @return MaCarotte[] Returns an array of MaCarotte objects
+    //  * @return MonAnnonce[] Returns an array of MonAnnonce objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +45,7 @@ class MaCarotteRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?MaCarotte
+    public function findOneBySomeField($value): ?MonAnnonce
     {
         return $this->createQueryBuilder('m')
             ->andWhere('m.exampleField = :val')

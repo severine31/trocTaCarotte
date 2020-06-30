@@ -2,10 +2,10 @@
 
 {% block body %}
     <div class="containerBouton">
-        <a class="btn btn-primary customBtn" href="#" role="button">
+        <a class="btn btn-primary customBtn" href="./create" role="button">
             <img class=imgBouton src={{asset('build/image/legume/carotte_flat.png')}} style=width:2%/> 
             <div class="container">
-                <span>Je troc ma carotte !</span>
+                <span>Je troque ma carotte !</span>
             </div>
         </a>
     </div>
@@ -15,7 +15,21 @@
         </div>
     </div>
     <div class="container">
-            {{ include("listingTable.html.twig") }}
+        <table class="table table-hover">
+            <thead class="headerRow">
+                <tr>
+                    <th scope="col">'Carotte' à troquer</th>
+                    <th scope="col">Contre</th>
+                    <th scope="col">Informations</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for annonce in annonces %}
+                    {% include '_listingTableTest.html.twig' 
+                        with [{'carotte': annonce.CarotteATroquer }, {'Quantity': annonce.Quantity }, {'Unity': annonce.Unite}, {'Bio': annonce.Bio }, {'Image': annonce.CarotteATroquer.image }, {'Ville': annonce.ville }, {'contreCarotte': annonce.ContreCarotte }, {'contreQuantity': annonce.ContreQuantite }, {'contreUnity': annonce.ContreUnite}, {'contreBio': annonce.ContreBio }] %}
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 
 {% endblock %}

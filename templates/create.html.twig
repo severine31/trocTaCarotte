@@ -1,0 +1,43 @@
+{% extends 'base.html.twig'%}
+
+{% block title 'Nouvelle annonce' %}
+{% block body %}
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="boxForm mt-5">
+                <h1 class="formHeader">Moi aussi je troque !<h1>	
+                {{ form_start(form) }}
+                    <div class="container">
+                        {{ form_row(form.CarotteATroquer) }}
+                        <div class="carotteDetailsForm">
+                            <div class="qtyDetails">
+                                {{ form_row(form.Quantity) }}
+                                {{ form_row(form.Unite) }}
+                            </div>
+                            {{ form_row(form.Bio) }}
+                        </div>
+                    </div>
+                    <div class="container mt-3">
+                        {{ form_row(form.ContreCarotte) }}
+                        <div class="carotteDetailsForm">
+                            <div class="qtyDetails">
+                                {{ form_row(form.ContreQuantite) }}
+                                {{ form_row(form.ContreUnite) }}
+                            </div>
+                            {{ form_row(form.ContreBio) }}
+                        </div>
+                    </div>
+                    <div class="container mt-3">
+                        {{ form_row(form.ville) }}
+                        {{ form_row(form.Description) }}
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <p>
+                            <input type="submit" class="btn btn-primary BtnValid" value="C'est parti !"/>
+                        </p>   
+                    </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
