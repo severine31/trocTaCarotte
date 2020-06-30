@@ -42,6 +42,7 @@ class MonAnnonceType extends AbstractType
                 ]
             ])
             ->add('Bio', ChoiceType::class, [
+                'label' => 'Bio :',
                 'placeholder' => 'Choisir une option',
                 'choices' => [
                     'Oui' => 'Oui',
@@ -69,11 +70,22 @@ class MonAnnonceType extends AbstractType
                     'unité(s)' => 'unité(s)'
                 ]
             ])
+            ->add('ContreBio', ChoiceType::class, [
+                'label' => 'Bio :',
+                'placeholder' => 'Choisir une option',
+                'choices' => [
+                    'Oui' => 'Oui',
+                    'Non' => 'Non'
+                ]
+            ])
             ->add('ville', EntityType :: class, [
                 'class' => Ville::class,
                 'choice_label' => 'nom'
             ])
-            ->add('Description', TextareaType::Class, ['attr' => ['rows' => 5]])
+            ->add('Description', TextareaType::Class, [
+                'label' => 'Votre message :',
+                'attr' => ['rows' => 3]
+            ])
         ;
     }
 

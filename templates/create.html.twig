@@ -5,22 +5,38 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="boxForm mt-5">
-                <h1 class="formHeader">Moi aussi je troque !<h1>
-                    {{ form_start(form) }}
-                        {{ form_widget(form) }}
-                        <div class="row justify-content-md-center">
-                            <p>
-                                <input type="submit" class="btn btn-primary" value="C'est parti !"/>|
-                                <a href="{{ path('home') }}">Cancel</a>
-                            </p>
-                   {#         <a class="btn btn-primary customBtn" href="./create" role="button">
-                                <img class=imgBouton src={{asset('build/image/legume/carotte_flat.png')}} style=width:2%/> 
-                                <div class="container">
-                                    <span>C'est parti !</span>
-                                </div>
-                            </a>  #}
+                <h1 class="formHeader">Moi aussi je troque !<h1>	
+                {{ form_start(form) }}
+                    <div class="container">
+                        {{ form_row(form.CarotteATroquer) }}
+                        <div class="carotteDetailsForm">
+                            <div class="qtyDetails">
+                                {{ form_row(form.Quantity) }}
+                                {{ form_row(form.Unite) }}
+                            </div>
+                            {{ form_row(form.Bio) }}
                         </div>
-                    {{ form_end(form)}}
+                    </div>
+                    <div class="container mt-3">
+                        {{ form_row(form.ContreCarotte) }}
+                        <div class="carotteDetailsForm">
+                            <div class="qtyDetails">
+                                {{ form_row(form.ContreQuantite) }}
+                                {{ form_row(form.ContreUnite) }}
+                            </div>
+                            {{ form_row(form.ContreBio) }}
+                        </div>
+                    </div>
+                    <div class="container mt-3">
+                        {{ form_row(form.ville) }}
+                        {{ form_row(form.Description) }}
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <p>
+                            <input type="submit" class="btn btn-primary BtnValid" value="C'est parti !"/>
+                        </p>   
+                    </div>
+                {{ form_end(form) }}
             </div>
         </div>
     </div>

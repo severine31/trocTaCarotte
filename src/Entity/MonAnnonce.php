@@ -94,6 +94,11 @@ class MonAnnonce
      */
     private $Ville;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ContreBio;
+
 
     public function getId(): ?int
     {
@@ -253,6 +258,18 @@ class MonAnnonce
     public function setVille(?Ville $Ville): self
     {
         $this->Ville = $Ville;
+
+        return $this;
+    }
+
+    public function getContreBio(): ?string
+    {
+        return $this->ContreBio;
+    }
+
+    public function setContreBio(?string $ContreBio): self
+    {
+        $this->ContreBio = $ContreBio;
 
         return $this;
     }

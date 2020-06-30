@@ -64,6 +64,13 @@ img {
     font-size: 20px !important;
     border-color: white !important;    
 }
+.BtnValid{
+    background-color: #cdd2b2 !important;
+    color: #434343 !important;
+    font-size: 20px !important;
+    border-color: white;
+    font-family: pacifico !important;
+}
 .radio{
     margin-bottom: 0.5em;
 }
@@ -76,6 +83,7 @@ img {
 .formHeader{
     font-size: 28px;
     margin-bottom: 0px;
+    text-align: center;
 }
 .valid{
     margin-top: 0.4em;
@@ -107,7 +115,7 @@ table{
     font-size: 16px;
 }
 .boxForm, label {
-    font-size: 16px;
+    font-size: 1.5rem;
 }
 .noPadding{
     padding:0px !important;
@@ -134,4 +142,12 @@ table{
 .table td[scope=row] {
     vertical-align: middle;
 }
+.carotteDetailsForm{
+    display: flex;
+}
+.qtyDetails{
+    display: flex;
+    margin-right: 10rem;    
+}
+
 
