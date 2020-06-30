@@ -48,7 +48,7 @@ img {
     margin-left: 3.5em;
     padding-bottom: 0.5em;
 }
-.searchForm{
+.boxForm{
     background-color: #F3F3F3; 
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     border-radius: 5px;
@@ -73,7 +73,7 @@ img {
     position: relative;    
     flex:2;
 }
-.searchHeader{
+.formHeader{
     font-size: 28px;
     margin-bottom: 0px;
 }
@@ -104,6 +104,9 @@ table{
 .labelCarotteForm{
     margin: 0em;
     text-align: left;
+    font-size: 16px;
+}
+.boxForm, label {
     font-size: 16px;
 }
 .noPadding{

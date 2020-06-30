@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\TrocRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=TrocRepository::class)
@@ -18,20 +19,17 @@ class Troc
     private $id;
 
     /**
-     * @Assert\PositiveOrZero
      * @ORM\ManyToOne(targetEntity=Carotte::class, inversedBy="trocs")
      * @ORM\JoinColumn(nullable=false)
      */
     private $CarotteATroquer;
 
     /**
-     * @Assert\PositiveOrZero
      * @ORM\ManyToOne(targetEntity=Carotte::class, inversedBy="trocs")
      */
     private $ContreCarotte;
 
     /**
-     * @Assert\PositiveOrZero
      * @ORM\Column(type="integer", nullable=true)
      */
     private $Quantity;
@@ -42,7 +40,6 @@ class Troc
     private $ContreQuantite;
 
     /**
-     * @Assert\PositiveOrZero
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $Bio;
