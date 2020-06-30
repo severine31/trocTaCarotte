@@ -34,27 +34,13 @@ class Ville
      */
     private $users;
 
-
     /**
-     * @ORM\ManyToOne(targetEntity=Ville::class, inversedBy="villes")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $relation;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Ville::class, mappedBy="relation")
-     */
-    private $villes;
-
-    /**
-     * @ORM\OneToMany(targetEntity=MonAnnonce::class, mappedBy="ville")
+     * @ORM\OneToMany(targetEntity=MonAnnonce::class, mappedBy="Ville")
      */
     private $monAnnonces;
 
     public function __construct()
     {
-        $this->users = new ArrayCollection();
-        $this->villes = new ArrayCollection();
         $this->monAnnonces = new ArrayCollection();
     }
 
@@ -112,49 +98,6 @@ class Ville
             // set the owning side to null (unless already changed)
             if ($user->getVille() === $this) {
                 $user->setVille(null);
-            }
-        }
-
-        return $this;
-    }
-
-    public function getRelation(): ?self
-    {
-        return $this->relation;
-    }
-
-    public function setRelation(?self $relation): self
-    {
-        $this->relation = $relation;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|self[]
-     */
-    public function getVilles(): Collection
-    {
-        return $this->villes;
-    }
-
-    public function addVille(self $ville): self
-    {
-        if (!$this->villes->contains($ville)) {
-            $this->villes[] = $ville;
-            $ville->setRelation($this);
-        }
-
-        return $this;
-    }
-
-    public function removeVille(self $ville): self
-    {
-        if ($this->villes->contains($ville)) {
-            $this->villes->removeElement($ville);
-            // set the owning side to null (unless already changed)
-            if ($ville->getRelation() === $this) {
-                $ville->setRelation(null);
             }
         }
 

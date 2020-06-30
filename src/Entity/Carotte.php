@@ -36,15 +36,6 @@ class Carotte
      */
     private $Image;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Troc::class, mappedBy="CarotteATroquer")
-     */
-    private $trocs;
-
-    public function __construct()
-    {
-        $this->trocs = new ArrayCollection();
-    }
 
     public function __toString()
     {
@@ -88,37 +79,6 @@ class Carotte
     public function setImage(string $Image): self
     {
         $this->Image = $Image;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Troc[]
-     */
-    public function getTrocs(): Collection
-    {
-        return $this->trocs;
-    }
-
-    public function addTroc(Troc $troc): self
-    {
-        if (!$this->trocs->contains($troc)) {
-            $this->trocs[] = $troc;
-            $troc->setCarotteATroquer($this);
-        }
-
-        return $this;
-    }
-
-    public function removeTroc(Troc $troc): self
-    {
-        if ($this->trocs->contains($troc)) {
-            $this->trocs->removeElement($troc);
-            // set the owning side to null (unless already changed)
-            if ($troc->getCarotteATroquer() === $this) {
-                $troc->setCarotteATroquer(null);
-            }
-        }
 
         return $this;
     }
