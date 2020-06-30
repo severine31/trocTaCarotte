@@ -1,0 +1,36 @@
+<tr>
+    <td scope="row">
+        {% include '_formCarotteTest.html.twig' 
+            with [{'carotte': annonce.CarotteATroquer }, {'Quantity': annonce.Quantity }, {'Unity': annonce.Unite}, {'Bio': annonce.Bio },{'Image': annonce.CarotteATroquer.image },  {'Ville': annonce.Ville }] %}
+    </td>
+    <td scope="row">
+{% include '_formCarotteTest.html.twig' 
+            with [{'carotte': annonce.ContreCarotte }, {'Quantity': annonce.ContreQuantite }, {'Unity': annonce.ContreUnite}, {'Bio': annonce.ContreBio }, {'Ville': annonce.Ville }] %}
+    </td>
+    <td scope="row">
+        <div class="container noPadding">
+            <div class="row justify-content-md-center">
+                <span>Publiée le 01/05/2020</span>
+            </div>
+            <div class="row justify-content-around icone">
+                <a class="nav-link" href="#"> 
+                    <svg class="bi bi-info-circle" width="2em" height="2em" viewBox="0 0 16 16" fill="#434343" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
+                        <circle cx="8" cy="4.5" r="1"/>
+                    </svg>
+                    <span>Detail annonce</span>
+                </a>
+                <a class="nav-link" href="#"> 
+                    <svg class="bi bi-basket" width="2em" height="2em" viewBox="0 0 16 16" fill="#434343" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.243 1.071a.5.5 0 0 1 .686.172l3 5a.5.5 0 1 1-.858.514l-3-5a.5.5 0 0 1 .172-.686zm-4.486 0a.5.5 0 0 0-.686.172l-3 5a.5.5 0 1 0 .858.514l3-5a.5.5 0 0 0-.172-.686z"/>
+                        <path fill-rule="evenodd" d="M1 7v1h14V7H1zM.5 6a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5H.5z"/>
+                        <path fill-rule="evenodd" d="M14 9H2v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9zM2 8a1 1 0 0 0-1 1v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9a1 1 0 0 0-1-1H2z"/>
+                        <path fill-rule="evenodd" d="M4 10a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    <span>Ca troque !</span>
+                </a>
+            </div>
+        </div>
+    </td>
+</tr>

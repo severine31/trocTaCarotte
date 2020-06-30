@@ -6,6 +6,7 @@ use App\Entity\MonAnnonce;
 use App\Form\MonAnnonceType;
 use App\Repository\UserRepository;
 use App\Repository\StatutRepository;
+use App\Repository\CarotteRepository;
 use App\Repository\MonAnnonceRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,9 +19,9 @@ class homeController extends AbstractController{
     /**
      * @Route("/", name="home")
     **/
-    public function index(MonAnnonceRepository $repo){
-        $annonce = $repo->findAvailableAnnonce();
-        return $this->render('home.html.twig',compact('annonce'));
+    public function index(MonAnnonceRepository $repo, CarotteRepository $repoCarotte){
+        $annonces = $repo->findAvailableAnnonce();
+        return $this->render('home.html.twig',compact('annonces'));
     }
 
     /**

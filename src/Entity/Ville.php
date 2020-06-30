@@ -39,6 +39,11 @@ class Ville
      */
     private $monAnnonces;
 
+    public function __toString()
+    {
+        return $this->Nom;
+    }
+
     public function __construct()
     {
         $this->monAnnonces = new ArrayCollection();
