@@ -149,5 +149,7 @@ table{
     display: flex;
     margin-right: 10rem;    
 }
-
+#logo{
+    margin-top: -18px;
+}
 

@@ -19,6 +19,13 @@ class MonAnnonceRepository extends ServiceEntityRepository
         parent::__construct($registry, MonAnnonce::class);
     }
 
+    public function findAvailableAnnonce(){
+        return $this->createQueryBuilder('MonAnnonce')
+            ->andWhere('MonAnnonce.Statut = 1')
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return MonAnnonce[] Returns an array of MonAnnonce objects
     //  */

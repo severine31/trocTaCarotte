@@ -6,6 +6,7 @@ use App\Entity\MonAnnonce;
 use App\Form\MonAnnonceType;
 use App\Repository\UserRepository;
 use App\Repository\StatutRepository;
+use App\Repository\MonAnnonceRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -13,11 +14,13 @@ use Symfony\Component\Validator\Constraints\DateTime;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class homeController extends AbstractController{
+
     /**
      * @Route("/", name="home")
     **/
-    public function index(){
-        return $this->render('home.html.twig');
+    public function index(MonAnnonceRepository $repo){
+        $annonce = $repo->findAvailableAnnonce();
+        return $this->render('home.html.twig',compact('annonce'));
     }
 
     /**

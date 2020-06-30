@@ -52,37 +52,6 @@ class Statut
     }
 
     /**
-     * @return Collection|MonAnnoce[]
-     */
-    public function getMonAnnoces(): Collection
-    {
-        return $this->monAnnoces;
-    }
-
-    public function addMonAnnoce(MonAnnoce $monAnnoce): self
-    {
-        if (!$this->monAnnoces->contains($monAnnoce)) {
-            $this->monAnnoces[] = $monAnnoce;
-            $monAnnoce->setStatut($this);
-        }
-
-        return $this;
-    }
-
-    public function removeMonAnnoce(MonAnnoce $monAnnoce): self
-    {
-        if ($this->monAnnoces->contains($monAnnoce)) {
-            $this->monAnnoces->removeElement($monAnnoce);
-            // set the owning side to null (unless already changed)
-            if ($monAnnoce->getStatut() === $this) {
-                $monAnnoce->setStatut(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
      * @return Collection|MonAnnonce[]
      */
     public function getMonAnnonces(): Collection
