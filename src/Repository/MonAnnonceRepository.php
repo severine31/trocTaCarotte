@@ -22,6 +22,7 @@ class MonAnnonceRepository extends ServiceEntityRepository
     public function findAvailableAnnonce(){
         return $this->createQueryBuilder('MonAnnonce')
             ->andWhere('MonAnnonce.Statut = 1')
+            ->orderBy('MonAnnonce.Date', 'DESC')
             ->getQuery()
             ->getResult();
     }
