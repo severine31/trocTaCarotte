@@ -4,29 +4,38 @@
 {% block body %}
     <div class="container">
         <div class="row justify-content-md-center">
-            <div class="boxForm mt-5">
-                <h1 class="formHeader">Moi aussi je troque !<h1>	
+            <div class="boxForm mt-3">
+                <p class="formHeader">Moi aussi je troque !<p>	
                 {{ form_start(form) }}
                     <table class="table table-hover">
-                        <thead class="headerRow">
+                        <thead class="headerRow formHeader">
                             <tr>
                                 <th scope="col">'Carotte' à troquer</th>
+                                <th scope="col">Contre</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td scope="row">
-                                    <form class="carotteForm noMargin">
+                                <td scope="row">   
                                     <div>
-                                        <b class="carotteName">carotte</b>
+                                        <p class="carotteName">{{ form_widget(form.CarotteATroquer) }}</p>
                                     </div>
                                     <div class="container noPadding">
                                         <div class="row justify-content-md-center">
                                             <div class="col-6">
                                                 <div class="container">
                                                     <div class="row">
+                                                        <div class="col-5 noPadding">
+                                                            <label for="contreCarotte" class="col labelCarotteForm noPadding">Quantité :</label>
+                                                        </div>
                                                         <div class="col-6 noPadding">
-                                                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value= {{ form_row(form.Quantity) }}>
+                                                            <p class="form-control-plaintext form-control-sm noPadding" id="contreCarotte">{{ form_widget(form.Quantity) }}</p>
+                                                        </div>
+                                                        <div class="col-5 noPadding">
+                                                            <label for="contreCarotte" class="col labelCarotteForm noPadding">Unité :</label>
+                                                        </div>
+                                                        <div class="col-6 noPadding">
+                                                            <p class="form-control-plaintext form-control-sm noPadding" id="contreCarotte">{{ form_widget(form.Unite) }}</p>
                                                         </div>
                                                     </div>
                                                     <div class="row">
@@ -34,31 +43,71 @@
                                                             <label for="contreCarotte" class="col labelCarotteForm noPadding">Bio :</label>
                                                         </div>
                                                         <div class="col-6 noPadding">
-                                                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value="Oui">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-5 noPadding">
-                                                            <label for="contreCarotte" class="col labelCarotteForm noPadding">Où :</label>
-                                                        </div>
-                                                        <div class="col-6 noPadding">
-                                                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value="Toulouse">
+                                                            <p class="form-control-plaintext form-control-sm noPadding" id="contreCarotte"> {{ form_widget(form.Bio) }}</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-3">
                                                 <div class="form-check form-check-inline noPadding">
-                                                    <img class=img-form src={{asset('build/image/legume/aubergine_flat.png')}} style=width:100%/> 
+                                                    <img class=img-form src={{asset('build/image/legume/panier_flat.png')}} style=width:100%/> 
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </form>
+                                </td>
+                               <td scope="row">   
+                                    <div>
+                                        <p class="carotteName">{{ form_widget(form.ContreCarotte) }}</p>
+                                    </div>
+                                    <div class="container noPadding">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-6">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-5 noPadding">
+                                                            <label for="contreCarotte" class="col labelCarotteForm noPadding">Quantité :</label>
+                                                        </div>
+                                                        <div class="col-6 noPadding">
+                                                            <p class="form-control-plaintext form-control-sm noPadding" id="contreCarotte">{{ form_widget(form.ContreQuantite) }}</p>
+                                                        </div>
+                                                        <div class="col-5 noPadding">
+                                                            <label for="contreCarotte" class="col labelCarotteForm noPadding">Unité :</label>
+                                                        </div>
+                                                        <div class="col-6 noPadding">
+                                                            <p class="form-control-plaintext form-control-sm noPadding" id="contreCarotte">{{ form_widget(form.ContreUnite) }}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-5 noPadding">
+                                                            <label for="contreCarotte" class="col labelCarotteForm noPadding">Bio :</label>
+                                                        </div>
+                                                        <div class="col-6 noPadding">
+                                                            <p class="form-control-plaintext form-control-sm noPadding" id="contreCarotte"> {{ form_widget(form.ContreBio) }}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-check form-check-inline noPadding">
+                                                    <img class=img-form src={{asset('build/image/legume/panier_flat.png')}} style=width:100%/> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+                    <div class="container">
+                        {{ form_row(form.ville) }}  
+                        {{ form_row(form.Description) }}
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <p>
+                            <input type="submit" class="btn btn-primary BtnValid" value="C'est parti !"/>
+                        </p>   
+                    </div>
                 {{ form_end(form) }}
             </div>
         </div>

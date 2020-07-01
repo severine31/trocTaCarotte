@@ -1,0 +1,48 @@
+<form class="carotteForm noMargin">
+    <div>
+        <p class="carotteName">{{ vars[0].carotte }}</p>
+    </div>
+    <div class="container noPadding">
+        <div class="row justify-content-md-center">
+            <div class="col-6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-5 noPadding">
+                            <label for="contreCarotte" class="col labelCarotteForm noPadding">Quantité :</label>
+                        </div>
+                        <div class="col-6 noPadding">
+                            <p class="form-control-plaintext form-control-sm noPadding" id="contreCarotte">{{ vars[1].Quantity }}</p>
+                        </div>
+                        <div class="col-5 noPadding">
+                            <label for="contreCarotte" class="col labelCarotteForm noPadding">Unité :</label>
+                        </div>
+                        <div class="col-6 noPadding">
+                            <p class="form-control-plaintext form-control-sm noPadding" id="contreCarotte">{{ vars[2].Unity }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 noPadding">
+                            <label for="contreCarotte" class="col labelCarotteForm noPadding">Bio :</label>
+                        </div>
+                        <div class="col-6 noPadding">
+                            <p class="form-control-plaintext form-control-sm noPadding" id="contreCarotte"> {{ vars[3].Bio }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 noPadding">
+                            <label for="contreCarotte" class="col labelCarotteForm noPadding">Où :</label>
+                        </div>
+                        <div class="col-6 noPadding">
+                            <p class="form-control-plaintext form-control-sm noPadding" id="contreCarotte"> {{ varsCarotte[4].Ville }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-check form-check-inline noPadding">
+                    <img class=img-form src={{asset('build/image/legume/carotte_flat.png')}} style=width:100%/> 
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
