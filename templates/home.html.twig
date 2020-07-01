@@ -25,8 +25,8 @@
             </thead>
             <tbody>
                 {% for annonce in annonces %}
-                    {% include '_listingTableTest.html.twig' 
-                        with [{'carotte': annonce.CarotteATroquer }, {'Quantity': annonce.Quantity }, {'Unity': annonce.Unite}, {'Bio': annonce.Bio }, {'Image': annonce.CarotteATroquer.image }, {'Ville': annonce.ville }, {'contreCarotte': annonce.ContreCarotte }, {'contreQuantity': annonce.ContreQuantite }, {'contreUnity': annonce.ContreUnite}, {'contreBio': annonce.ContreBio }] %}
+                    {% set vars = [{'carotte': annonce.CarotteATroquer }, {'Quantity': annonce.Quantity }, {'Unity': annonce.Unite}, {'Bio': annonce.Bio }, {'Image': annonce.CarotteATroquer.image }, {'Ville': annonce.ville }, {'contreCarotte': annonce.ContreCarotte }, {'contreQuantity': annonce.ContreQuantite }, {'contreUnity': annonce.ContreUnite}, {'contreBio': annonce.ContreBio }, {'ContreImage': annonce.ContreCarotte.image }] %}
+                    {% include '_listingTable.html.twig' with vars %}
                 {% endfor %}
             </tbody>
         </table>
