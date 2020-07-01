@@ -1,11 +1,11 @@
 <tr>
     <td scope="row">
-        {% include '_formCarotteTest.html.twig' 
-            with [{'carotte': annonce.CarotteATroquer }, {'Quantity': annonce.Quantity }, {'Unity': annonce.Unite}, {'Bio': annonce.Bio },{'Image': annonce.CarotteATroquer.image },  {'Ville': annonce.Ville }] %}
+        {% set varsCarotte = [{'carotte': vars[0].carotte}, {'Quantity': vars[1].Quantity }, {'Unity': vars[2].Unity }, {'Bio': vars[3].Bio },{'Image': vars[4].Image },  {'Ville': vars[5].Ville }] %}
+        {% include '_formCarotte.html.twig' with varsCarotte %}
     </td>
     <td scope="row">
-{% include '_formCarotteTest.html.twig' 
-            with [{'carotte': annonce.ContreCarotte }, {'Quantity': annonce.ContreQuantite }, {'Unity': annonce.ContreUnite}, {'Bio': annonce.ContreBio }, {'Ville': annonce.Ville }] %}
+        {% set varsCarotte = [{'carotte': vars[6].contreCarotte }, {'Quantity': vars[7].contreQuantity }, {'Unity': vars[8].contreUnity }, {'Bio': vars[9].contreBio }, {'Image': vars[10].ContreImage }, {'Ville': vars[5].Ville }] %}
+        {% include '_formCarotte.html.twig' with varsCarotte %}
     </td>
     <td scope="row">
         <div class="container noPadding">
@@ -31,6 +31,6 @@
                     <span>Ca troque !</span>
                 </a>
             </div>
-        </div>
-    </td>
+        </div>   
+    </td>  
 </tr>

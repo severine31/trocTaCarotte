@@ -1,6 +1,6 @@
 <form class="carotteForm noMargin">
     <div>
-        <b class="carotteName">Aubergine</b>
+        <b class="carotteName">{{ varsCarotte[0].carotte }}</b>
     </div>
     <div class="container noPadding">
         <div class="row justify-content-md-center">
@@ -11,7 +11,7 @@
                             <label for="contreCarotte" class="col labelCarotteForm noPadding">Quantité :</label>
                         </div>
                         <div class="col-6 noPadding">
-                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value="2Kg">
+                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value= {{ varsCarotte[1].Quantity }} ~ {{ varsCarotte[2].Unity }}>
                         </div>
                     </div>
                     <div class="row">
@@ -19,7 +19,7 @@
                             <label for="contreCarotte" class="col labelCarotteForm noPadding">Bio :</label>
                         </div>
                         <div class="col-6 noPadding">
-                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value="Oui">
+                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value={{ varsCarotte[3].Bio }}>
                         </div>
                     </div>
                     <div class="row">
@@ -27,14 +27,14 @@
                             <label for="contreCarotte" class="col labelCarotteForm noPadding">Où :</label>
                         </div>
                         <div class="col-6 noPadding">
-                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value="Toulouse">
+                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value={{ varsCarotte[5].Ville }}>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-3">
                 <div class="form-check form-check-inline noPadding">
-                    <img class=img-form src={{asset('build/image/legume/aubergine_flat.png')}} style=width:100%/> 
+                    <img class=img-form src={{asset('build/image/legume/'~ varsCarotte[4].Image)}} style=width:100%/> 
                 </div>
             </div>
         </div>
