@@ -12,12 +12,6 @@ pipeline{
                 }   
             }
         }
-        stage("Docker-compose Building"){
-            steps {
-                echo "Starting docker"
-                sh('docker-compose donw')
-                sh('docker-compose up -d')
-            }
-        }
+        
     }
 }
