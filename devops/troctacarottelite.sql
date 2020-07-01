@@ -1,8 +1,6 @@
 INSERT INTO `carotte` VALUES (1,1,'Carotte','carotte_flat.png'),(2,1,'Aubergine','aubergine_flat.png'),(3,1,'Courgette','courgette_flat.png'),(4,1,'Patate','patate_flat.png'),(5,1,'Tomate','tomate_flat.png'),(6,2,'Abricot','abricot_flat.png'),(7,2,'Banane','banane_flat.png'),(8,2,'Cerise','cerise_flat.png'),(9,2,'Citron','citron_flat.png'),(10,2,'Fraise','fraise_flat.png'),(11,2,'Framboise','framboise_flat.png'),(12,2,'Kiwi','kiwi_flat.png'),(13,2,'Mûre','mure_flat.png'),(14,2,'Pêche','peche_flat.png'),(15,2,'Poire','poire_flat.png'),(16,2,'Pomme','pomme_flat.png'),(17,2,'Raisin','raisin_flat.png');
 INSERT INTO `categorie` VALUES (1,'Légume'),(2,'Fruit'),(3,'Autre');
 
-INSERT INTO `mon_annonce` VALUES (1,1,1,1,2,7,'2020-06-30 00:00:00',NULL,NULL,2,5,'Oui','Kg','Kg',NULL);
-
 INSERT INTO `statut` VALUES (1,'En cours'),(2,'Terminé');
 
 INSERT INTO `user` VALUES (1,1,'Cantaloube','Séverine','F','femme_flat.png','severine.cantaloube@gmail.com'),(2,1,'Pellissier','Thibaud','H','homme_flat.png','thibaudpellissier.com');
