@@ -21,5 +21,5 @@ WORKDIR /var/www
 
 RUN chmod +x /var/www/bin/console
 
-CMD composer install ; yarn install ; yarn encore dev ; bin/console doctrine:database:create ; bin/console make:migration ; bin/console doctrine:migrations:migrate ; bin/console doctrine:fixtures:load ; php -S 0.0.0.0:8000 -t public/
+CMD composer install ; yarn install ; yarn encore dev ; bin/console doctrine:database:create ; bin/console make:migration ; bin/console doctrine:migrations:migrate ; bin/console doctrine:fixtures:load -q ; php -S 0.0.0.0:8000 -t public/
 EXPOSE 8000
