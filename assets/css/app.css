@@ -4,48 +4,67 @@
 body {
     font-family: pacifico !important;
     margin: 0px;
-    font-size: 20px;
+    font-size: 100%;
+}
+.boxHeader{
+    width: 100%;
+    text-align: center;
 }
 .headerTitle{
     color: #434343;
-    text-align: center;
-    font-size: 87px;
     margin: 0px;
+    font-size: 4em;
     background-color: #e9f6a8;
-}
-.boxHeader {
-    width: 2000em;
 }
 .boxCitation {
     background-color: white;
     color: #BBC695;
     font-family: arial;
     text-align: right;
-    padding-right: 2em;
+    padding-right: 1.5em;
     font-style: italic;
 }
 .navbar-navCustom{
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
 }
 .navbar{
+    display: flex;
+    flex-direction: column;
     background-color: #cdd2b2;
     padding: unset !important;
+    width: 100%;
+}
+.navbar-collapse{
+    flex-grow: 0;
+}
+.navbar-toggler {
+    font-size: 1.25em;
+    line-height: 0.5 !important;
+}
+.container-fluid{
+    justify-content: flex-end !important;
 }
 img {
-    width: 280px;
-    height: auto;
     position: absolute;
+    left: 0.7rem;
+    bottom: 0px;
+    height: 90%;
+    width: auto;
 }
 .imgBouton{
-    width: 1.5em; 
+    width: 1.5em;
     height: auto;
+    position: relative;
+    left: 0px;
+    margin-right: 0.5%;
 }
 .containerBouton{
-    margin-left: 3.5em;
+    margin-left: 1.2em;
     padding-bottom: 0.5em;
 }
 .boxForm{
@@ -56,12 +75,11 @@ img {
     width: 40em;
 }
 .customBtn{
-    display: flex !important;
-    width: 14em !important;
+    display: initial !important;
     background-color: #cdd2b2 !important;
     color: #434343 !important;
     text-align: center !important;
-    font-size: 20px !important;
+    font-size: 1em !important;
     border-color: white !important;    
 }
 .BtnValid{
@@ -98,7 +116,6 @@ table{
     margin-top: 2em;
     text-align: center;
 }
-
 .carotteForm{
     background-color: #F3F3F3; 
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
@@ -152,7 +169,22 @@ table{
     display: flex;
     margin-right: 10rem;    
 }
-#logo{
-    margin-top: -18px;
-}
 
+@media (max-width: 500px) {
+    img {
+        position: absolute;
+        left: 0.5rem;
+        bottom: 0px;
+        height: 70%;
+        width: auto;
+    }
+    .headerTitle{
+        font-size: calc(70% + 1vw + 1vh);
+    }
+    .customBtn{
+        font-size: calc(20% + 0.5vw + 0.5vh) !important;
+    }
+    span{
+        font-size: calc(20% + 0.5vw + 0.5vh) !important;
+    }
+}
