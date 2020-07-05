@@ -1,63 +1,63 @@
 <form class="boxForm">
     <div>
-        <label class="formHeader" for="">Je recherche :</label>
+        <label class="formHeader responsiveText" for="">Je recherche :</label>
     </div>
-    <div class="row justify-content-around radio">
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="maCarotteCat" id="legumeRadio" value="option1" checked>
-            <label class="form-check-label" for="legumeRadio">Légume</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="maCarotteCat" id="fruitRadio" value="option2">
-            <label class="form-check-label" for="fruitRadio">Fruit</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="maCarotteCat" id="autreRadio" value="option3">
-            <label class="form-check-label" for="autreRadio">Autre</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <img class=img-form src={{asset('build/image/legume/panier_flat.png')}} style=width:3%/> 
+    <div class="container">
+        <div class="row justify-content-around radio">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="maCarotteCat" id="legumeRadio" value="option1" checked>
+                <label class="form-check-label" for="legumeRadio">Légume</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="maCarotteCat" id="fruitRadio" value="option2">
+                <label class="form-check-label" for="fruitRadio">Fruit</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="maCarotteCat" id="autreRadio" value="option3">
+                <label class="form-check-label" for="autreRadio">Autre</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <img class=img-form src={{asset('build/image/legume/panier_flat.png')}} style=width:3%/> 
+            </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-5">
+            <div class="col-6">
                 <label for="carotteSelect" class="col customLabel">La 'carotte' à chercher :</label>
             </div>
-            <div class="col-7">
+            <div class="col-6">
                 <select class="form-control form-control-sm" id="carotteSelect">
                     <option>Default select</option>
                 </select>
             </div>
         </div>
         <div class="row">
-            <div class="col-5">
+            <div class="col-6">
                 <label for="villeSelect" class="col customLabel">Où ça ?</label>
             </div>
-            <div class="col-7">
+            <div class="col-6">
                 <select class="form-control form-control-sm" id="villeSelect">
                     <option>Default select ville</option>
                 </select>
             </div>
         </div>
         <div class="row">
-            <div class="col-5">
+            <div class="col-6">
                 <label for="contreCarotte" class="col customLabel">Mes 'carottes' à troquer :</label>
             </div>
-            <div class="col-7">
+            <div class="col-6">
                 <input type="contreCarotte" class="form-control form-control-sm" id="contreCarotte" placeholder="">
             </div>
         </div>
     </div>
-    <div class="row justify-content-md-center">
-        <a class="btn btn-primary customBtn valid" href="#" role="button">
-            <svg class="bi bi-search imgBouton" width="1em" height="1em" viewBox="0 0 16 16" fill="#434343" xmlns="http://www.w3.org/2000/svg">
+    <div class="container alignCenter">
+         <a class="btn btn-primary customBtn valid" href="#" role="button">
+            <svg class="bi bi-search imgBouton" width="2%" height="1em" viewBox="0 0 16 16" fill="#434343" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
                 <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
             </svg>
-            <div class="container">
-                <span>Trouve ma carotte</span>
-            </div>
+            <span>Trouve ma carotte</span>
         </a>
     </div>
 </form>

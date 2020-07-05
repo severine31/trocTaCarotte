@@ -69,12 +69,15 @@ img {
     margin-left: 1.2em;
     padding-bottom: 0.5em;
 }
+.container{
+    padding-bottom: 1.3em;
+}
 .boxForm{
     background-color: #F3F3F3; 
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     border-radius: 5px;
-    padding:1em;
-    width: 40em;
+    padding:0.3em;
+    width: calc(85% + 1vw + 1vh);
 }
 .customBtn{
     display: initial !important;
@@ -101,9 +104,14 @@ img {
     flex:2;
 }
 .formHeader{
-    font-size: 45px;
+    font-size: 1.3em;
     margin-bottom: 0px;
     text-align: center;
+    padding: 0.2em;
+}
+.formSearch{
+    justify-content: center;
+    padding-top: 1.3em;
 }
 .valid{
     margin-top: 0.4em;
@@ -167,6 +175,9 @@ table{
 .carotteDetailsForm{
     display: flex;
 }
+.alignCenter{
+    text-align: center;
+}
 .qtyDetails{
     display: flex;
     margin-right: 10rem;    
@@ -187,10 +198,20 @@ ul{
     .headerTitle{
         font-size: calc(70% + 1vw + 1vh);
     }
+    .formHeader{
+        font-size: calc(30% + 1vw + 1vh);
+    }
     .customBtn{
         font-size: calc(20% + 0.5vw + 0.5vh) !important;
     }
     span{
         font-size: calc(20% + 0.5vw + 0.5vh) !important;
+    }
+    .boxForm, label {
+        font-size: calc(15% + 0.4vw + 1vh);
+    }
+    .formSearch{
+        justify-content: center;
+        padding-top: 0.5em;
     }
 }
