@@ -171,7 +171,7 @@ table{
     display: flex;
     margin-right: 10rem;    
 }
-.collapse >ul{
+ul{
     align-items: center;
     padding-right: 0.5em;
 }
