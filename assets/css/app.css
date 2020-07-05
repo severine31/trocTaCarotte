@@ -36,15 +36,17 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #cdd2b2;
+    align-items: flex-end;
     padding: unset !important;
     width: 100%;
 }
 .navbar-collapse{
-    flex-grow: 0;
+    flex-grow: 1;
 }
 .navbar-toggler {
     font-size: 1.25em;
     line-height: 0.5 !important;
+    color: #434343;
 }
 .container-fluid{
     justify-content: flex-end !important;
@@ -169,8 +171,12 @@ table{
     display: flex;
     margin-right: 10rem;    
 }
+.collapse >ul{
+    align-items: center;
+    padding-right: 0.5em;
+}
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     img {
         position: absolute;
         left: 0.5rem;
