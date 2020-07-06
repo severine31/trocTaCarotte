@@ -123,16 +123,14 @@ select{
     font-family: arial !important;
 }
 table{
-    margin-top: 2em;
+    padding-top:0.5em;
     text-align: center;
 }
 .carotteForm{
     background-color: #F3F3F3; 
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    width:90%;
     border-radius: 7px;
-    padding:1em;
-    width: 400px;
-    height: 180px; 
 }
 .labelCarotteForm{
     margin: 0em;
@@ -153,7 +151,7 @@ table{
     text-align: center;
 }
 .carotteName{
-    font-size: 25px;
+    font-size: 1.1em;
     font-style: bolt;
 }
 .icone{
@@ -162,14 +160,14 @@ table{
 }
 .icone span{
     display:flex;
-    font-size: 12px;
+    font-size: 0.8em;
     color: #434343;
 }
 .table td[scope=row] {
     vertical-align: middle;
 }
 .table th {
-    font-size:20px !important;
+    font-size:1.3em !important;
     background-color: #e9f6a8;
 }
 .carotteDetailsForm{
@@ -186,8 +184,18 @@ ul{
     align-items: center;
     padding-right: 0.5em;
 }
+.row{
+    align-items: center;
+}
+table .row{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
 
-@media (max-width: 600px) {
+.row > label {
+    padding-left: 0.5em !important;
+}
+@media (max-width: 900px) {
     img {
         position: absolute;
         left: 0.5rem;
@@ -212,11 +220,23 @@ ul{
         padding-right: 0px !important;
         padding-left: 0px !important;
     }
-    .boxForm .form-control {
+    .data {
         font-size: calc(5% + 0.4vw + 1vh) !important;
     }
     .formSearch{
         justify-content: center;
         padding-top: 0.5em;
+    }
+    .table th {
+        font-size:calc(15% + 1vw + 1vh) !important;
+        background-color: #e9f6a8;
+    }
+    .carotteName{
+        font-size: calc(15% + 1vw + 1vh);
+        font-style: bolt;
+    }
+    .nav-link {
+        width: 2em;
+        height: auto;
     }
 }

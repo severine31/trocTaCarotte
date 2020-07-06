@@ -2,32 +2,32 @@
     <div>
         <b class="carotteName">{{ varsCarotte[0].carotte }}</b>
     </div>
-    <div class="container noPadding">
+    <div class="container">
         <div class="row justify-content-md-center">
-            <div class="col-6">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-5 noPadding">
-                            <label for="contreCarotte" class="col labelCarotteForm noPadding">Quantité :</label>
+            <div class="col-9">
+                <div class="container noPadding">
+                    <div class="row paddingRowTab">
+                        <div class="col-6 noPadding">
+                            <label for="contreCarotte" class="col labelCarotteForm">Quantité :</label>
                         </div>
                         <div class="col-6 noPadding">
-                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value= "{{ varsCarotte[1].Quantity }} {{ varsCarotte[2].Unity }}">
+                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding data" id="contreCarotte" value= "{{ varsCarotte[1].Quantity }} {{ varsCarotte[2].Unity }}">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-5 noPadding">
-                            <label for="contreCarotte" class="col labelCarotteForm noPadding">Bio :</label>
+                        <div class="col-6 noPadding">
+                            <label for="contreCarotte" class="col labelCarotteForm">Bio :</label>
                         </div>
                         <div class="col-6 noPadding">
-                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value="{{ varsCarotte[3].Bio }}">
+                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding data" id="contreCarotte" value="{{ varsCarotte[3].Bio }}">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-5 noPadding">
-                            <label for="contreCarotte" class="col labelCarotteForm noPadding">Où :</label>
+                        <div class="col-6 noPadding">
+                            <label for="contreCarotte" class="col labelCarotteForm">Où :</label>
                         </div>
                         <div class="col-6 noPadding">
-                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding" id="contreCarotte" value="{{ varsCarotte[5].Ville }}">
+                            <input type="contreCarotte" readonly class="form-control-plaintext form-control-sm noPadding data" id="contreCarotte" value="{{ varsCarotte[5].Ville }}">
                         </div>
                     </div>
                 </div>
