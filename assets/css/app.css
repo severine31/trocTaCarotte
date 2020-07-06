@@ -140,7 +140,7 @@ table{
     font-size: 16px;
 }
 .boxForm, label {
-    font-size: 1.5rem;
+    font-size: 1.1em;
 }
 .noPadding{
     padding:0px !important;
@@ -208,7 +208,12 @@ ul{
         font-size: calc(20% + 0.5vw + 0.5vh) !important;
     }
     .boxForm, label {
-        font-size: calc(15% + 0.4vw + 1vh);
+        font-size: calc(5% + 0.4vw + 1vh) !important;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+    .boxForm .form-control {
+        font-size: calc(5% + 0.4vw + 1vh) !important;
     }
     .formSearch{
         justify-content: center;
