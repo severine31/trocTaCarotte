@@ -83,7 +83,7 @@ class MonAnnonceType extends AbstractType
                 'choice_label' => 'nom'
             ])
             ->add('Description', TextareaType::Class, [
-                'label' => 'Votre message :',
+                'label' => 'Mon message :',
                 'attr' => ['rows' => 3]
             ])
         ;
