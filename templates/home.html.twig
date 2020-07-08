@@ -22,7 +22,7 @@
             <tbody>
                 {% for annonce in annonces %}
                     {%  set dateAnnonce = annonce.Date | date("d/m/Y") %}
-                    {% set vars = [{'carotte': annonce.CarotteATroquer }, {'Quantity': annonce.Quantity }, {'Unity': annonce.Unite }, {'Bio': annonce.Bio }, {'Image': annonce.CarotteATroquer.image }, {'Ville': annonce.ville }, {'contreCarotte': annonce.ContreCarotte }, {'contreQuantity': annonce.ContreQuantite }, {'contreUnity': annonce.ContreUnite}, {'contreBio': annonce.ContreBio }, {'ContreImage': annonce.ContreCarotte.image }, {'Date': dateAnnonce }] %}
+                    {% set vars = [{'carotte': annonce.CarotteATroquer }, {'Quantity': annonce.Quantity }, {'Unity': annonce.Unite }, {'Bio': annonce.Bio }, {'Image': annonce.CarotteATroquer.image }, {'Ville': annonce.ville }, {'contreCarotte': annonce.ContreCarotte }, {'contreQuantity': annonce.ContreQuantite }, {'contreUnity': annonce.ContreUnite}, {'contreBio': annonce.ContreBio }, {'ContreImage': annonce.ContreCarotte.image }, {'Date': dateAnnonce },{'id': annonce.id }] %}
                     {% include '_listingTable.html.twig' with vars %}
                 {% endfor %}
             </tbody>

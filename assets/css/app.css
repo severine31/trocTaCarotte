@@ -238,6 +238,15 @@ table .row{
 .unity{
     width:5em;
 }
+.boxShow{
+    border: groove;
+    border-radius: 5px;
+    background-color: #FCFCFC;
+}
+.important{
+    font-size: 1.5em !important;
+    font-weight: bold !important;
+}
 @media (max-width: 990px) {
     img {
         position: absolute;

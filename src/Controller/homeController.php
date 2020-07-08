@@ -10,9 +10,11 @@ use App\Repository\CarotteRepository;
 use App\Repository\MonAnnonceRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Constraints\DateTime;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 class homeController extends AbstractController{
 
@@ -49,5 +51,14 @@ class homeController extends AbstractController{
             'annonce' => $annonce,
             'form' => $form->createView()
         ]);  
+    }
+
+    /**
+     * @Route ("/{id<[0-9]+>}", name="troc.show", methods={"GET"})
+     */
+    public function show(MonAnnonceRepository $repo, $id) : Response
+    {   
+        $annonce =$repo->find($id);
+        return $this->render('show.html.twig',compact('annonce'));
     }
 }
