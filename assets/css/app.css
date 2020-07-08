@@ -235,6 +235,9 @@ table .row{
     align-items: baseline !important;
     justify-content: flex-end;
 }
+.unity{
+    width:5em;
+}
 @media (max-width: 990px) {
     img {
         position: absolute;

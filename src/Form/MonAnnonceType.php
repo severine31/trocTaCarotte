@@ -33,18 +33,18 @@ class MonAnnonceType extends AbstractType
             ])
             ->add('Unite', ChoiceType::class, [
                 'label' => 'Unité :',
-                'placeholder' => 'Choisir une option',
+                'empty_data' => 'Kg',
                 'choices' => [
                     'Kg' => 'Kg',
                     'g' => 'g',
                     'L' => 'L',
-                    'unité(s)' => 'unité(s)'
+                    'pc' => 'pc'
                 ]
             ])
             ->add('Bio', ChoiceType::class, [
                 'label' => 'Bio :',
-                'placeholder' => 'Choisir une option',
                 'choices' => [
+                    'Peu importe' => 'Peu importe',
                     'Oui' => 'Oui',
                     'Non' => 'Non'
                 ]
@@ -62,18 +62,18 @@ class MonAnnonceType extends AbstractType
             ])
             ->add('ContreUnite', ChoiceType::class, [
                 'label' => 'Unité :',
-                'placeholder' => 'Choisir une option',
+                'empty_data' => 'Kg',
                 'choices' => [
                     'Kg' => 'Kg',
                     'g' => 'g',
                     'L' => 'L',
-                    'unité(s)' => 'unité(s)'
+                    'pc' => 'pc'
                 ]
             ])
             ->add('ContreBio', ChoiceType::class, [
                 'label' => 'Bio :',
-                'placeholder' => 'Choisir une option',
                 'choices' => [
+                    'Peu importe' => 'Peu importe',
                     'Oui' => 'Oui',
                     'Non' => 'Non'
                 ]
