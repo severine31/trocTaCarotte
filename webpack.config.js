@@ -65,6 +65,10 @@ Encore
         from: './assets/image/personnage',
         to: 'image/personnage/[path][name].[hash:8].[ext]'
     })
+    .copyFiles({
+        from: './assets/image/autre',
+        to: 'image/autre/[path][name].[hash:8].[ext]'
+    })
 
     // enables Sass/SCSS support
     //.enableSassLoader()
@@ -77,7 +81,7 @@ Encore
     //.enableIntegrityHashes(Encore.isProduction())
 
     // uncomment if you're having problems with a jQuery plugin
-    //.autoProvidejQuery()
+    .autoProvidejQuery()
 
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()

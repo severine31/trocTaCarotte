@@ -3,18 +3,14 @@
 {% block body %}
     <div class="containerBouton">
         <a class="btn btn-primary customBtn" href="./create" role="button">
-            <img class=imgBouton src={{asset('build/image/legume/carotte_flat.png')}} style=width:2%/> 
-            <div class="container">
-                <span>Je troque ma carotte !</span>
-            </div>
-        </a>
+            <img class=imgBouton src={{asset('build/image/legume/carotte_flat.png')}} style=width:2%/>Je troque ma carotte !</a>
     </div>
     <div class="container">
-        <div class="row justify-content-md-center">
+        <div class="row formSearch">
             {{ include("search.html.twig") }}
         </div>
     </div>
-    <div class="container">
+   <div class="container tableFix">  
         <table class="table table-hover">
             <thead class="headerRow">
                 <tr>
@@ -26,11 +22,10 @@
             <tbody>
                 {% for annonce in annonces %}
                     {%  set dateAnnonce = annonce.Date | date("d/m/Y") %}
-                    {% set vars = [{'carotte': annonce.CarotteATroquer }, {'Quantity': annonce.Quantity }, {'Unity': annonce.Unite }, {'Bio': annonce.Bio }, {'Image': annonce.CarotteATroquer.image }, {'Ville': annonce.ville }, {'contreCarotte': annonce.ContreCarotte }, {'contreQuantity': annonce.ContreQuantite }, {'contreUnity': annonce.ContreUnite}, {'contreBio': annonce.ContreBio }, {'ContreImage': annonce.ContreCarotte.image }, {'Date': dateAnnonce }] %}
+                    {% set vars = [{'carotte': annonce.CarotteATroquer }, {'Quantity': annonce.Quantity }, {'Unity': annonce.Unite }, {'Bio': annonce.Bio }, {'Image': annonce.CarotteATroquer.image }, {'Ville': annonce.ville }, {'contreCarotte': annonce.ContreCarotte }, {'contreQuantity': annonce.ContreQuantite }, {'contreUnity': annonce.ContreUnite}, {'contreBio': annonce.ContreBio }, {'ContreImage': annonce.ContreCarotte.image }, {'Date': dateAnnonce },{'id': annonce.id }] %}
                     {% include '_listingTable.html.twig' with vars %}
                 {% endfor %}
             </tbody>
         </table>
     </div>
-
-{% endblock %}
+{% endblock %} 
