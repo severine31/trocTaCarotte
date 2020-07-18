@@ -247,6 +247,10 @@ table .row{
     font-size: 1.5em !important;
     font-weight: bold !important;
 }
+.notes{
+    font-family: arial !important;
+    font-size: 0.7em;
+}
 @media (max-width: 990px) {
     img {
         position: absolute;
