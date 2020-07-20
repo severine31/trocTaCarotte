@@ -16,9 +16,11 @@ class RegistrationController extends AbstractController
      * @Route("/registration", name="registration")
     **/
     public function index(){
-       // if (!$this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY')){
-            return $this->redirectToRoute('create.registration');
-      //  }
+        if (!$this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY')){
+            return $this->redirectToRoute('app_login');
+        //    return $this->redirectToRoute('create.registration');
+            
+        }
     }
     /**
      * @Route("/registration/create", name="create.registration")

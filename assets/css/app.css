@@ -82,6 +82,9 @@ img {
 .create{
     width: calc(80% + 1vw + 1vh);
 }
+.connexion{
+    width: calc(40% + 1vw + 1vh);
+}
 .customBtn{
     display: initial !important;
     background-color: #cdd2b2 !important;
@@ -251,6 +254,13 @@ table .row{
     font-family: arial !important;
     font-size: 0.7em;
 }
+.rowSpaceBtw{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+}
+
+
 @media (max-width: 990px) {
     img {
         position: absolute;

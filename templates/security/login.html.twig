@@ -14,15 +14,34 @@
         </div>
     {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
-    <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" required>
-
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
+    <div class="row justify-content-md-center">
+        <div class="boxForm connexion mt-3">
+            <div class="container flexRow">
+                <div class="headerCreate">
+                    <label class="formHeader" for="">Je me connecte</label>
+                </div>
+            </div>
+            <div class="container">
+                <label for="inputEmail">Email</label>
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+                <label for="inputPassword">Password</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" required>
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            </div>
+            <div class="container">
+                    <div class="row justify-content-md-center">
+                        <p>
+                            <input type="submit" class="btn btn-primary BtnValid" value="Connexion"/>
+                        </p>   
+                    </div>
+            </div>
+            <div class="container justify-content-md-center">
+                <a href="{{ path('create.registration') }}">Je n'ai pas de compte</a>
+                <a href="#">Mot de passe oublié</a>
+            </div>
+        </div>
+    </div>
+    
 
     {#
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
@@ -35,8 +54,6 @@
         </div>
     #}
 
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
-    </button>
+
 </form>
 {% endblock %}
