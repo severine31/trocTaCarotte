@@ -259,7 +259,10 @@ table .row{
     flex-direction: row !important;
     justify-content: space-between !important;
 }
-
+.linkForm{
+    color: #9ea18a !important;
+    margin-right: 1em;
+}
 
 @media (max-width: 990px) {
     img {

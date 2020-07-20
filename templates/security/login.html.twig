@@ -16,11 +16,13 @@
 
     <div class="row justify-content-md-center">
         <div class="boxForm connexion mt-3">
-            <div class="container flexRow">
+            <div class="container pb-0">
                 <div class="headerCreate">
+                    <img class="imgFormCreate mr-3" src={{asset('build/image/personnage/femme_flat.png')}} style=width:100%/> 
                     <label class="formHeader" for="">Je me connecte</label>
                 </div>
             </div>
+            <hr class="mt-0">
             <div class="container">
                 <label for="inputEmail">Email</label>
                 <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
@@ -36,8 +38,8 @@
                     </div>
             </div>
             <div class="container justify-content-md-center">
-                <a href="{{ path('create.registration') }}">Je n'ai pas de compte</a>
-                <a href="#">Mot de passe oublié</a>
+                <a class="linkForm" href="{{ path('create.registration') }}">Je n'ai pas de compte</a>
+                <a class="linkForm" href="#">Mot de passe oublié</a>
             </div>
         </div>
     </div>
