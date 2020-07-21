@@ -2,7 +2,6 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Carotte;
 use Symfony\Component\Finder\Finder;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -33,5 +32,9 @@ class AppFixtures extends Fixture
 
             $manager->flush();
         }
+        // $product = new Product();
+        // $manager->persist($product);
+
+        $manager->flush();
     }
 }

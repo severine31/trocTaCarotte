@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un compte{% endblock %}
+
+{% block body %}
+    <div class="row justify-content-md-center">
+        <div class="boxForm connexion mt-3">
+            <div class="container pb-0">
+                <div class="headerCreate">
+                    <img class="imgFormCreate mr-3" src={{asset('build/image/personnage/femme_flat.png')}} style=width:100%/> 
+                    <label class="formHeader" for="">Je crée mon compte</label>
+                </div>
+            </div>
+            <hr class="mt-0">
+            {{ form_start(form) }}
+                <div class="container rowSpaceBtw">
+                    {{ form_row(form.Nom) }}
+                    {{ form_row(form.Prenom) }}
+                    {{ form_row(form.Sexe) }}
+                </div>
+                <div class="container">
+                    {{ form_row(form.ville) }}
+                </div>
+                <div class="container">
+                    {{ form_row(form.email) }}
+                    {{ form_row(form.password) }}
+                </div>
+                <div class="row justify-content-md-center">
+                    <p>
+                        <input type="submit" class="btn btn-primary BtnValid" value="Valider"/>
+                    </p>   
+                </div>
+                <div class="container notes">
+                    <span>En créant mon compte je reconnais avoir lu et accepté les Conditions Générales d‘Utilisation, et je confirme être âgé d’au moins 18 ans.</span>
+                </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

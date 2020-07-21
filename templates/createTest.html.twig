@@ -7,7 +7,7 @@
             <div class="boxForm create mt-3">
                 <div class="container flexRow pb-0">
                     <div class="headerCreate">
-                        <img class="imgFormCreate" src={{asset('build/image/personnage/femme_flat.png')}} style=width:100%/> 
+                        <img class="imgFormCreate" src={{asset('build/image/personnage/' ~ annonce.user.image)}} style=width:100%/> 
                         <label class="formHeader" for="">Moi aussi je troque ma carotte !</label>
                     </div>
                     <div class="trocSummary">
@@ -88,30 +88,6 @@
                     <div class="container mt-4 pb-0">
                         {{ form_row(form.Description) }}
                     </div>
-        {#}                <div class="row">
-                            <div class="col-6">
-                                <div class="row">
-                                    <div class="col-5">
-                                    </div>
-                                    <div class="col-7">
-                                        <div class="row justify-content-md-center mb-3 mt-5">
-                                            <img class="imgFormCreate" src={{asset('build/image/legume/panier_flat.png')}} style=width:100%/> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="row">
-                                    <div class="col-5">
-                                    </div>
-                                    <div class="col-7">
-                                        <div class="row justify-content-md-center mb-3 mt-5">
-                                            <img class="imgFormCreate" src={{asset('build/image/legume/panier_flat.png')}} style=width:100%/> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>    #}
                     <div class="row justify-content-md-center">
                         <p>
                             <input type="submit" class="btn btn-primary BtnValid" value="C'est parti !"/>

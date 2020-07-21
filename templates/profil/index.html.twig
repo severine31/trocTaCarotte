@@ -1,0 +1,45 @@
+{% extends 'base.html.twig'%}
+
+{% block title 'Mon Profil' %}
+{% block body %}
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="boxForm create mt-3">
+                <div class="container pb-0">
+                    <div class="headerCreate">
+                        <img class="imgFormCreate mr-3" src={{asset('build/image/personnage/' ~ app.user.getImage())}} style=width:100%/> 
+                        <label class="formHeader" for="">{{ app.user.getPrenom() ~ " " ~ app.user.getNom() }}</label>
+                    </div>
+                </div>
+                <hr class="mt-0">
+                <div class="container tableFix">  
+                    <table class="table table-hover">
+                        <thead class="headerRow">
+                            <tr>
+                                <th scope="col">'Carotte' à troquer</th>
+                                <th scope="col">Contre</th>
+                                <th scope="col">Informations</th>
+                            </tr>
+                        </thead>
+                    <tbody>
+       {#}                 {% for annonce in annonces %}
+                            {%  set dateAnnonce = annonce.Date | date("d/m/Y") %}
+                            {% set vars = [{'carotte': annonce.CarotteATroquer }, {'Quantity': annonce.Quantity }, {'Unity': annonce.Unite }, {'Bio': annonce.Bio }, {'Image': annonce.CarotteATroquer.image }, {'Ville': annonce.ville }, {'contreCarotte': annonce.ContreCarotte }, {'contreQuantity': annonce.ContreQuantite }, {'contreUnity': annonce.ContreUnite}, {'contreBio': annonce.ContreBio }, {'ContreImage': annonce.ContreCarotte.image }, {'Date': dateAnnonce },{'id': annonce.id }] %}
+                            {% include '_listingTable.html.twig' with vars %}
+                        {% endfor %}   #}
+                    </tbody>
+                    </table>
+                </div>
+                {% if app.user %}
+                    <div class="notes mb-3">
+                        {% if app.user.getSexe() == "F" %}
+                            Vous êtes connectée avec l'identifiant {{ app.user.username }}, <a class="linkForm" href="{{ path('app_logout') }}">Se déconnecter</a>
+                        {% else %}
+                            Vous êtes connecté avec l'identifiant {{ app.user.username }}, <a class="linkForm" href="{{ path('app_logout') }}">Se déconnecter</a>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
