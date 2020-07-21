@@ -252,7 +252,7 @@ table .row{
 }
 .notes{
     font-family: arial !important;
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
 .rowSpaceBtw{
     display: flex !important;
@@ -262,6 +262,30 @@ table .row{
 .linkForm{
     color: #9ea18a !important;
     margin-right: 1em;
+}
+.cgu{
+    font-family: arial !important;
+    font-size: 1em;    
+}
+.titleCgu{
+    font-family: arial !important;
+    font-size: 1.1em;
+    color: black !important;    
+}
+.imgCgu{
+    width: 2em;
+    height: auto;
+    position: relative;     
+}
+.roundBulletList > li{
+    list-style-type: disc;
+    padding-left: 2.4rem;
+    margin-bottom: .8rem;
+}
+.circleBulletList > li{
+    list-style-type: circle;
+    padding-left: 2.4rem;
+    margin-bottom: .8rem;
 }
 
 @media (max-width: 990px) {
