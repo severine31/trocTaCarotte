@@ -2,7 +2,7 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\User2;
+use App\Entity\User;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
@@ -17,7 +17,7 @@ class UserFixtures extends Fixture
     }
     public function load(ObjectManager $manager)
     {
-            $user = new User2();
+            $user = new User();
         // $product = new Product();
         // $manager->persist($product);
         $user->setPassword($this->passwordEncoder->encodePassword(

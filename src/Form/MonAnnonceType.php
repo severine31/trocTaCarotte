@@ -82,7 +82,7 @@ class MonAnnonceType extends AbstractType
                 'class' => Ville::class,
                 'choice_label' => 'nom'
             ])
-            ->add('Description', TextareaType::Class, [
+            ->add('Description', TextareaType :: class, [
                 'label' => 'Mon message :',
                 'attr' => ['rows' => 3]
             ])
