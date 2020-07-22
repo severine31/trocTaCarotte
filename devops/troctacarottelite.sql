@@ -21,3 +21,9 @@ LOCK TABLES `statut` WRITE;
 INSERT INTO `statut` VALUES (1,'En cours'),(2,'Terminé');
 /*!40000 ALTER TABLE `statut` ENABLE KEYS */;
 UNLOCK TABLES;
+
+LOCK TABLES `mon_annonce` WRITE;
+/*!40000 ALTER TABLE `mon_annonce` DISABLE KEYS */;
+INSERT INTO `mon_annonce` VALUES (10,5,1,1,11,7,'2020-07-18 13:21:29','test','N;',3,5,'Oui','Kg','Kg','Non'),(11,7,1,1,14,12,'2020-07-20 14:05:12','Je troque des pêches contre des Kiwis :)\r\nC\'est fou ce que ça produit cette année les pêchers!!','N;',10,2,'Oui','Kg','Kg','Peu importe'),(12,7,1,1,16,2,'2020-07-21 20:48:32','Echange pommes contre aubergines.','N;',4,1,'Oui','Kg','Kg','Peu importe');
+/*!40000 ALTER TABLE `mon_annonce` ENABLE KEYS */;
+UNLOCK TABLES;
