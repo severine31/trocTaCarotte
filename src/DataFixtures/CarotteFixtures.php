@@ -3,6 +3,7 @@
 namespace App\DataFixtures;
 
 use App\Entity\Carotte;
+use App\Entity\Categorie;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 
@@ -76,11 +77,13 @@ class CarotteFixtures extends Fixture
                 "image" => "raisin_flat.png"
             )
         );
-        
+        $repoCat = $manager->getRepository(Categorie :: class);
+
         foreach ($carotteTab as $key => $value){
             $carotte = new Carotte();
-            $carotte->setNom($carotteTab[$key]);
-            $carotte->setCategorie($value['categorie']);
+            $cat = $repoCat->findOneBy(['Nom' => $value['categorie']]);
+            $carotte->setNom($key);
+            $carotte->setCategorie($cat);
             $carotte->setImage($value['image']);
             $manager->persist($carotte);
             $manager->flush();
