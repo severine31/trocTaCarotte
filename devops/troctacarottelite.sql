@@ -22,6 +22,12 @@ INSERT INTO `statut` VALUES (1,'En cours'),(2,'Terminé');
 /*!40000 ALTER TABLE `statut` ENABLE KEYS */;
 UNLOCK TABLES;
 
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (5,1,'Pellissier','Thibaud','H','homme_flat.png','thibaudpellissier@gmail.com','[\"ROLE_USER\"]','$argon2id$v=19$m=65536,t=4,p=1$M3hoS3J2dWF0T1BObUMvTw$9k0AuqN21WSkzltygT4zK1MIHdDKPRTd4iXAXaCOtZc'),(7,1,'Cantaloube','Séverine','F','femme_flat.png','severine.cantaloube@gmail.com','[\"ROLE_USER\"]','$argon2id$v=19$m=65536,t=4,p=1$SHdRclBuVGtEUkxvaS5vZA$9Qc7wYqlUkVw7DmDVzTecwlzAyWJTSsWFP2sz2s5F44');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
 LOCK TABLES `mon_annonce` WRITE;
 /*!40000 ALTER TABLE `mon_annonce` DISABLE KEYS */;
 INSERT INTO `mon_annonce` VALUES (10,5,1,1,11,7,'2020-07-18 13:21:29','test','N;',3,5,'Oui','Kg','Kg','Non'),(11,7,1,1,14,12,'2020-07-20 14:05:12','Je troque des pêches contre des Kiwis :)\r\nC\'est fou ce que ça produit cette année les pêchers!!','N;',10,2,'Oui','Kg','Kg','Peu importe'),(12,7,1,1,16,2,'2020-07-21 20:48:32','Echange pommes contre aubergines.','N;',4,1,'Oui','Kg','Kg','Peu importe');
