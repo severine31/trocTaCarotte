@@ -69,6 +69,10 @@ Encore
         from: './assets/image/autre',
         to: 'image/autre/[path][name].[hash:8].[ext]'
     })
+    .copyFiles({
+        from: './assets/image/favicon',
+        to: 'image/favicon/[path][name].[hash:8].[ext]'
+    })
 
     // enables Sass/SCSS support
     //.enableSassLoader()
