@@ -1,11 +1,11 @@
 <tr>
     <td scope="row">
         {% set varsCarotte = [{'carotte': vars[0].carotte}, {'Quantity': vars[1].Quantity }, {'Unity': vars[2].Unity }, {'Bio': vars[3].Bio },{'Image': vars[4].Image },  {'Ville': vars[5].Ville }] %}
-        {% include '_formCarotte.html.twig' with varsCarotte %}
+        {% include '/partialTwig/_formCarotte.html.twig' with varsCarotte %}
     </td>
     <td scope="row">
         {% set varsCarotte = [{'carotte': vars[6].contreCarotte }, {'Quantity': vars[7].contreQuantity }, {'Unity': vars[8].contreUnity }, {'Bio': vars[9].contreBio }, {'Image': vars[10].ContreImage }, {'Ville': vars[5].Ville }] %}
-        {% include '_formCarotte.html.twig' with varsCarotte %}
+        {% include '/partialTwig/_formCarotte.html.twig' with varsCarotte %}
     </td>
     <td scope="row">
         <div class="container noPadding">
@@ -19,7 +19,7 @@
                         <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
                         <circle cx="8" cy="4.5" r="1"/>
                     </svg>
-                    <span>Detail annonce</span>
+                    <span>Modifier</span>
                 </a>
                 <a class="nav-link" href="#"> 
                     <svg class="bi bi-basket" width="2em" height="2em" viewBox="0 0 16 16" fill="#434343" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +28,7 @@
                         <path fill-rule="evenodd" d="M14 9H2v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9zM2 8a1 1 0 0 0-1 1v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9a1 1 0 0 0-1-1H2z"/>
                         <path fill-rule="evenodd" d="M4 10a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
                     </svg>
-                    <span>Ca troque !</span>
+                    <span>Supprimer</span>
                 </a>
             </div>
         </div>   

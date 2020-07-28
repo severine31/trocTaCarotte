@@ -287,6 +287,9 @@ table .row{
     padding-left: 2.4rem;
     margin-bottom: .8rem;
 }
+.headerRowProfilTable{
+    font-size: small;
+}
 
 @media (max-width: 990px) {
     img {

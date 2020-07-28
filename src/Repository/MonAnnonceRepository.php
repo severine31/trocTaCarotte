@@ -27,7 +27,14 @@ class MonAnnonceRepository extends ServiceEntityRepository
             ->getResult();
     }
 
-
+    public function findAvailableAnnonceByProfil($userId){
+        return $this->createQueryBuilder('MonAnnonce')
+            ->andWhere('MonAnnonce.Statut = 1')
+            ->andWhere('MonAnnonce.User = ' . $userId)
+            ->orderBy('MonAnnonce.Date', 'DESC')
+            ->getQuery()
+            ->getResult();
+    }
     // /**
     //  * @return MonAnnonce[] Returns an array of MonAnnonce objects
     //  */

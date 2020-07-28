@@ -13,8 +13,9 @@
                 </div>
                 <hr class="mt-0">
                 <div class="container tableFix">  
+                    <p>Mes annonces en cours :</p>
                     <table class="table table-hover">
-                        <thead class="headerRow">
+                        <thead class="headerRowProfilTable">
                             <tr>
                                 <th scope="col">'Carotte' à troquer</th>
                                 <th scope="col">Contre</th>
@@ -22,11 +23,11 @@
                             </tr>
                         </thead>
                     <tbody>
-       {#}                 {% for annonce in annonces %}
+                        {% for annonce in annonces %}
                             {%  set dateAnnonce = annonce.Date | date("d/m/Y") %}
                             {% set vars = [{'carotte': annonce.CarotteATroquer }, {'Quantity': annonce.Quantity }, {'Unity': annonce.Unite }, {'Bio': annonce.Bio }, {'Image': annonce.CarotteATroquer.image }, {'Ville': annonce.ville }, {'contreCarotte': annonce.ContreCarotte }, {'contreQuantity': annonce.ContreQuantite }, {'contreUnity': annonce.ContreUnite}, {'contreBio': annonce.ContreBio }, {'ContreImage': annonce.ContreCarotte.image }, {'Date': dateAnnonce },{'id': annonce.id }] %}
-                            {% include '_listingTable.html.twig' with vars %}
-                        {% endfor %}   #}
+                            {% include '/partialTwig/_listingTableProfil.html.twig' with vars %}
+                        {% endfor %}
                     </tbody>
                     </table>
                 </div>
