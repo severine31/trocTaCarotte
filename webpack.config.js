@@ -55,19 +55,23 @@ Encore
 
     .copyFiles({
         from: './assets/image/fruit',
-        to: 'image/fruit/[path][name].[hash:8].[ext]'
+        to: 'image/fruit/[path][name].[ext]'
+    //    to: 'image/fruit/[path][name].[hash:8].[ext]'
     })
     .copyFiles({
         from: './assets/image/legume',
-        to: 'image/legume/[path][name].[hash:8].[ext]'
+        to: 'image/legume/[path][name].[ext]'
+    //    to: 'image/legume/[path][name].[hash:8].[ext]'
     })
     .copyFiles({
         from: './assets/image/personnage',
-        to: 'image/personnage/[path][name].[hash:8].[ext]'
+        to: 'image/personnage/[path][name].[ext]'
+    //    to: 'image/personnage/[path][name].[hash:8].[ext]'
     })
     .copyFiles({
         from: './assets/image/autre',
-        to: 'image/autre/[path][name].[hash:8].[ext]'
+        to: 'image/autre/[path][name].[ext]'
+    //    to: 'image/autre/[path][name].[hash:8].[ext]'
     })
     .copyFiles({
         from: './assets/image/favicon',

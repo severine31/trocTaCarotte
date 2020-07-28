@@ -14,6 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Asset\Packages;
 
 class MonAnnonceType extends AbstractType
 {
@@ -25,6 +26,9 @@ class MonAnnonceType extends AbstractType
                 'placeholder' => "Sélectionner 'la carotte' à troquer",
                 'class' => Carotte::class,
                 'choice_label' => 'Nom',
+                'choice_attr' => function($choice, $key, $value) {
+                    return ['data-image' => $choice->getImage()];
+                },
             ])
             ->add('Quantity', NumberType::class, [
                 'html5' => true, 
@@ -54,6 +58,9 @@ class MonAnnonceType extends AbstractType
                 'placeholder' => "Sélectionner 'la carotte' cherchée",
                 'class' => Carotte::class,
                 'choice_label' => 'Nom',
+                'choice_attr' => function($choice, $key, $value) {
+                    return ['data-image' => $choice->getImage()];
+                },
             ])
             ->add('ContreQuantite', NumberType::class, [
                 'html5' => true, 
