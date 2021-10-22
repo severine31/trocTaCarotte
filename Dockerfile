@@ -19,5 +19,5 @@ RUN docker-php-ext-install pdo_mysql
 
 WORKDIR /var/www
 
-CMD composer install ; yarn install ; yarn encore dev ; bin/console doctrine:database:create ; bin/console make:migration ; bin/console doctrine:migrations:migrate ; bin/console doctrine:fixtures:load -q ; php -S 0.0.0.0:8000 -t public/
+CMD composer install ; yarn install ; yarn encore dev ; /var/www/bin/console doctrine:database:create ; /var/www/bin/console make:migration ; /var/www/bin/console doctrine:migrations:migrate ; /var/www/bin/console doctrine:fixtures:load -q ; php -S 0.0.0.0:8000 -t public/
 EXPOSE 8000
