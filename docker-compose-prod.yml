@@ -26,7 +26,7 @@ services:
         container_name: carotte_tardis
 
     carottedb:
-        image: mysql:latest
+        image: mariadb
         networks:
             - tardis_net
         environment:
