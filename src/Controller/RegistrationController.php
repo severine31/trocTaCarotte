@@ -8,7 +8,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class RegistrationController extends AbstractController
 {
@@ -25,7 +25,7 @@ class RegistrationController extends AbstractController
     /**
      * @Route("/registration/create", name="create.registration")
     **/
-    public function create(Request $request, EntityManagerInterface $em, UserPasswordEncoderInterface $passwordEncoder){
+    public function create(Request $request, EntityManagerInterface $em, UserPasswordHasherInterface $passwordEncoder){
         $registration = new User;
 
         $form = $this->createForm(RegistrationFormType::class, $registration);

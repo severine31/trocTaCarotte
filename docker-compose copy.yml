@@ -1,0 +1,39 @@
+version: '2'
+
+services:
+    carotte:
+        build:
+            context: .
+        restart: always
+        networks:
+            - tardis_net
+        expose: 
+            - "8000"
+        labels:   
+            - "traefik.enable=true"
+            - "traefik.http.middlewares.redirect-tls.redirectscheme.scheme=https"
+            - "traefik.http.routers.carotte.rule=Host(`troctacarotte.fr`)"
+            - "traefik.http.routers.carotte.entrypoints=web"
+            - "traefik.http.routers.carotte.middlewares=redirect-tls"
+            - "traefik.http.routers.carotte-secured.rule=Host(`troctacarotte.fr`)"
+            - "traefik.http.routers.carotte-secured.entrypoints=websecure"
+            - "traefik.http.routers.carotte-secured.tls.certresolver=mytlschallenge"
+            - "traefik.http.services.carotte-secured.loadbalancer.server.port=8000"
+        depends_on:
+            - carottedb
+        links:
+            - carottedb
+        container_name: carotte_tardis
+
+    carottedb:
+        image: mysql:latest
+        networks:
+            - tardis_net
+        environment:
+            - MYSQL_ROOT_PASSWORD=toor
+        container_name: carotte_tardis_db
+
+networks: 
+    tardis_net:
+        external: true
+    
