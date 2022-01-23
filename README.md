@@ -1,3 +1,3 @@
 # trocTaCarotte
-docker-compose up --build
-port:8000
+Run docker-compose up --build
+Interface access: localhost:8000
